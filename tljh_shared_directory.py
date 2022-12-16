@@ -23,7 +23,7 @@ def tljh_config_post_install(config):
     sh.chown('root:jupyterhub-users', '/srv/sharing_folder')
     sh.chmod('777', '/srv/sharing_folder')
     sh.chmod('g+s', '/srv/sharing_folder')
-    sh.ln('-s', '/srv/scratch', '/etc/skel/sharing_folder')
+    sh.ln('-s', '/srv/sharing_folder', '/etc/skel/sharing_folder')
 
     
     
